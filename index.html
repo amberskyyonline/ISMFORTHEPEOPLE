@@ -30,11 +30,13 @@ img{
 
 .hero{
     padding:3rem 1rem;
+    display:flex;
+    justify-content:center;
 }
 
 .logo{
     width:min(700px,90vw);
-    margin:auto;
+    height:auto;
 }
 
 .gallery{
@@ -55,17 +57,22 @@ img{
 }
 
 .products{
+    max-width:1200px;
+    margin:0 auto;
     padding:5rem 1rem;
 }
 
 .product-grid{
     display:grid;
     grid-template-columns:1fr;
-    gap:40px;
+    gap:60px;
+    justify-items:center;
 }
 
 .product{
     text-align:center;
+    width:100%;
+    max-width:320px;
 }
 
 .product img{
@@ -99,8 +106,9 @@ img{
 
 .about{
     max-width:700px;
-    margin:auto;
+    margin:0 auto;
     padding:4rem 1.5rem;
+    text-align:center;
 }
 
 .about h2{
@@ -142,7 +150,8 @@ footer{
 }
 
 .product-grid{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(2,320px);
+    justify-content:center;
 }
 
 }
@@ -154,7 +163,8 @@ footer{
 }
 
 .product-grid{
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,320px);
+    justify-content:center;
 }
 
 }
@@ -215,8 +225,8 @@ footer{
         </div>
 
         <div class="product">
-            <a href="belt-yellow.html">
-                <img src="images/belt-yellow.jpg" alt="">
+            <a href="belt.html">
+                <img src="images/belt.jpg" alt="">
             </a>
             <h3>Snakeskin ISM Belt</h3>
         </div>
@@ -230,9 +240,8 @@ footer{
     <h2>About</h2>
 
     <p>
-        ISM FOR THE PEOPLE is an independent label exploring fashion,
-        culture, and everyday objects through limited releases and
-        seasonal collections.
+        ISM is an independent label exploring fashion,
+        culture, and everyday objects through limited releases and seasonal collections.
     </p>
 
 </section>
@@ -241,9 +250,7 @@ footer{
 
     <div class="footer-links">
         <a href="archive.html">Archive</a>
-        <a href="https://instagram.com/ismforthepeople" target="_blank">
-            Instagram
-        </a>
+        <a href="https://instagram.com/ismforthepeople" target="_blank">Instagram</a>
     </div>
 
     <p class="copyright">

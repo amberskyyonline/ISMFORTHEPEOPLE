@@ -1,229 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ISM FOR THE PEOPLE</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
 body{
     background:#000;
     color:#fff;
     font-family:Helvetica, Arial, sans-serif;
-    line-height:1.5;
-}
-
-a{
-    color:#fff;
-    text-decoration:none;
-}
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:2rem;
 }
 
 .hero h1{
-    font-size:clamp(2.5rem,8vw,6rem);
+    font-size:clamp(1.5rem,4vw,2.5rem);
+    font-weight:700;
     letter-spacing:.15em;
-    font-weight:400;
+
+    background:linear-gradient(
+        90deg,
+        #ff2b2b,
+        #00ff66,
+        #ffd400
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 }
+<section class="products">
 
-.hero p{
-    margin-top:1rem;
-    opacity:.7;
-    max-width:500px;
-}
+<h2>AVAILABLE INVENTORY</h2>
 
-.button{
-    display:inline-block;
-    margin-top:2rem;
-    padding:14px 32px;
-    border:1px solid #fff;
-    transition:.2s;
-}
+<div class="product-grid">
 
-.button:hover{
-    background:#fff;
-    color:#000;
-}
+<div class="product">
+<img src="images/watch.jpg" alt="">
+<h3>ISM Contraband Watch</h3>
+<a href="#">Buy Now</a>
+</div>
 
-.gallery{
-    padding:1rem;
-    display:grid;
-    gap:10px;
-    grid-template-columns:1fr;
-}
+<div class="product">
+<img src="images/logo-tee.jpg" alt="">
+<h3>ISM Logo Tee</h3>
+<a href="#">Buy Now</a>
+</div>
 
-.gallery img{
-    width:100%;
-    display:block;
-    object-fit:cover;
-}
+<div class="product">
+<img src="images/belt-yellow.jpg" alt="">
+<h3>Snakeskin ISM Belt — Yellow</h3>
+<a href="#">Buy Now</a>
+</div>
 
-.shop{
-    padding:5rem 1rem;
-    max-width:1200px;
-    margin:auto;
-}
+<div class="product">
+<img src="images/belt-pink.jpg" alt="">
+<h3>Snakeskin ISM Belt — Pink</h3>
+<a href="#">Buy Now</a>
+</div>
 
-.shop-title{
-    text-align:center;
-    margin-bottom:3rem;
-    font-size:2rem;
-    font-weight:400;
-}
+</div>
 
-.products{
-    display:grid;
-    gap:2rem;
-}
+</section>
 
-.product{
-    border:1px solid rgba(255,255,255,.15);
-    padding:1rem;
-}
+<section class="about">
 
-.product img{
-    width:100%;
-    display:block;
-    margin-bottom:1rem;
-}
-
-.product h3{
-    font-weight:400;
-}
-
-.price{
-    opacity:.7;
-    margin:.5rem 0 1rem;
-}
-
-.buy{
-    display:inline-block;
-    border:1px solid #fff;
-    padding:12px 24px;
-}
-
-.buy:hover{
-    background:#fff;
-    color:#000;
-}
-
-footer{
-    text-align:center;
-    padding:4rem 1rem;
-    border-top:1px solid rgba(255,255,255,.1);
-}
-
-footer a{
-    opacity:.7;
-}
-
-@media(min-width:768px){
-
-.gallery{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.products{
-    grid-template-columns:repeat(3,1fr);
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<section class="hero">
-
-<h1>ISM FOR THE PEOPLE</h1>
+<h2>About</h2>
 
 <p>
-Final Archive Release.
-Remaining inventory from previous collections.
-Available while supplies last.
+ISM FOR THE PEOPLE is an independent label exploring
+fashion, culture, and everyday objects through limited
+releases and seasonal collections.
+
+This archive release features remaining inventory from
+previous collections available while supplies last.
 </p>
-
-<a href="#shop" class="button">
-SHOP COLLECTION
-</a>
-
-</section>
-
-<section class="gallery">
-
-<img src="images/gallery-1.jpg" alt="">
-<img src="images/gallery-2.jpg" alt="">
-<img src="images/gallery-3.jpg" alt="">
-<img src="images/gallery-4.jpg" alt="">
-<img src="images/gallery-5.jpg" alt="">
-<img src="images/gallery-6.jpg" alt="">
-
-</section>
-
-<section class="shop" id="shop">
-
-<h2 class="shop-title">
-AVAILABLE INVENTORY
-</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="images/hoodie.jpg" alt="">
-<h3>Logo Hoodie</h3>
-<p class="price">$65</p>
-<a href="#" class="buy">BUY NOW</a>
-</div>
-
-<div class="product">
-<img src="images/tee.jpg" alt="">
-<h3>Graphic Tee</h3>
-<p class="price">$35</p>
-<a href="#" class="buy">BUY NOW</a>
-</div>
-
-<div class="product">
-<img src="images/hat.jpg" alt="">
-<h3>Cap</h3>
-<p class="price">$30</p>
-<a href="#" class="buy">BUY NOW</a>
-</div>
-
-</div>
 
 </section>
 
 <footer>
 
-<p>© ISM FOR THE PEOPLE</p>
+<a href="archive.html">Archive</a>
 
-<br>
-
-<a href="https://www.instagram.com/ismforthepeople/">
-INSTAGRAM
+<a href="https://instagram.com/ismforthepeople">
+Instagram
 </a>
 
-</footer>
+<p>
+© ISM FOR THE PEOPLE 2026
+</p>
 
-</body>
-</html>
+</footer>

@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+color:#fff;
+font-family:Helvetica, Arial, sans-serif;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:3rem 1.5rem;
+text-align:center;
+}
+
+#beltImage{
+margin-bottom:2rem;
+}
+
+h1{
+font-style:italic;
+font-size:1.75rem;
+margin-bottom:1rem;
+
+background:linear-gradient(
+90deg,
+#ff2b2b,
+#00ff66,
+#ffd400
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.description{
+color:rgba(255,255,255,.8);
+line-height:1.8;
+margin-bottom:2rem;
+}
+
+.colors{
+display:flex;
+justify-content:center;
+gap:1rem;
+margin-bottom:2rem;
+}
+
+.colors button{
+background:none;
+border:1px solid #fff;
+color:#fff;
+padding:12px 24px;
+cursor:pointer;
+}
+
+.price{
+font-size:1.2rem;
+margin-bottom:2rem;
+}
+
+.purchase{
+display:inline-block;
+padding:14px 32px;
+border:1px solid #fff;
+margin-bottom:2rem;
+}
+
+.back{
+display:block;
+opacity:.7;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img
+id="beltImage"
+src="images/17.png"
+alt=""
+>
+
+<h1>Snakeskin ISM Belt</h1>
+
+<p class="description">
+Snakeskin with a Brushed metal 'ISM' buckle.
+Available in Yellow and Pink.
+</p>
+
+<div class="colors">
+
+<button onclick="document.getElementById('beltImage').src='images/15.png'">
+Yellow
+</button>
+
+<button onclick="document.getElementById('beltImage').src='images/16.png'">
+Pink
+</button>
+
+</div>
+
+<p class="price">$120.00</p>
+
+<a href="https://square.link/u/5iM19Y5h" target="_blank" class="purchase">
+Purchase Pink
+</a>
+<a href="https://square.link/u/vVhmzPRv" target="_blank" class="purchase">
+Purchase Yellow
+</a>
+  
+<a href="index.html" class="back">
+← Back to Home
+</a>
+
+</div>
+
+</body>
+</html>

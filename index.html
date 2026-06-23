@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ISM FOR THE PEOPLE</title>
 
 <style>
 
@@ -17,23 +16,74 @@ body{
     background:#000;
     color:#fff;
     font-family:Helvetica, Arial, sans-serif;
-    line-height:1.6;
 }
 
 a{
-    color:#fff;
     text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
 }
 
 .hero{
-    text-align:center;
-    padding:60px 20px;
+    padding:3rem 1rem;
 }
 
-.hero h1{
-    font-size:clamp(1.5rem,4vw,2.5rem);
+.logo{
+    width:min(700px,90vw);
+    margin:auto;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    padding:0 1rem;
+}
+
+.gallery img{
+    aspect-ratio:4/5;
+    object-fit:cover;
+    transition:.3s ease;
+}
+
+.gallery img:hover{
+    opacity:.85;
+}
+
+.products{
+    padding:5rem 1rem;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.product{
+    text-align:center;
+}
+
+.product img{
+    aspect-ratio:4/5;
+    object-fit:cover;
+    margin-bottom:1rem;
+    transition:.3s ease;
+}
+
+.product img:hover{
+    opacity:.85;
+}
+
+.product h3{
+    font-size:1rem;
+    font-style:italic;
     font-weight:700;
-    letter-spacing:.15em;
+    letter-spacing:.05em;
 
     background:linear-gradient(
         90deg,
@@ -47,85 +97,42 @@ a{
     background-clip:text;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:12px;
-    padding:20px;
-}
-
-.gallery img{
-    width:100%;
-    display:block;
-    border-radius:4px;
-}
-
-.products{
-    padding:60px 20px;
-    max-width:1200px;
-    margin:auto;
-}
-
-.products h2{
-    margin-bottom:30px;
-    text-align:center;
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:20px;
-}
-
-.product{
-    border:1px solid rgba(255,255,255,.15);
-    padding:15px;
-}
-
-.product img{
-    width:100%;
-    display:block;
-    margin-bottom:15px;
-}
-
-.product h3{
-    margin-bottom:15px;
-}
-
-.buy-btn{
-    display:inline-block;
-    border:1px solid #fff;
-    padding:10px 20px;
-    transition:.2s ease;
-}
-
-.buy-btn:hover{
-    background:#fff;
-    color:#000;
-}
-
 .about{
-    max-width:800px;
+    max-width:700px;
     margin:auto;
-    padding:60px 20px;
+    padding:4rem 1.5rem;
 }
 
 .about h2{
-    margin-bottom:20px;
+    margin-bottom:1rem;
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    font-style:italic;
+}
+
+.about p{
+    color:rgba(255,255,255,.8);
+    line-height:1.8;
 }
 
 footer{
-    padding:40px 20px;
-    border-top:1px solid rgba(255,255,255,.15);
     text-align:center;
+    padding:3rem 1rem;
 }
 
 .footer-links{
-    margin-bottom:20px;
+    margin-bottom:1rem;
 }
 
 .footer-links a{
-    margin:0 10px;
+    margin:0 1rem;
+    font-style:italic;
+}
+
+.copyright{
+    opacity:.5;
+    font-size:.85rem;
 }
 
 @media(min-width:768px){
@@ -140,54 +147,78 @@ footer{
 
 }
 
+@media(min-width:1200px){
+
+.gallery{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.product-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <section class="hero">
-    <h1>ISM FOR THE PEOPLE</h1>
+    <img src="images/logo.png" alt="" class="logo">
 </section>
 
 <section class="gallery">
 
-    <img src="images/gallery-1.jpg" alt="">
-    <img src="images/gallery-2.jpg" alt="">
-    <img src="images/gallery-3.jpg" alt="">
-    <img src="images/gallery-4.jpg" alt="">
-    <img src="images/gallery-5.jpg" alt="">
-    <img src="images/gallery-6.jpg" alt="">
+    <a href="archive.html">
+        <img src="images/gallery-1.jpg" alt="">
+    </a>
+
+    <a href="archive.html">
+        <img src="images/gallery-2.jpg" alt="">
+    </a>
+
+    <a href="archive.html">
+        <img src="images/gallery-3.jpg" alt="">
+    </a>
+
+    <a href="archive.html">
+        <img src="images/gallery-4.jpg" alt="">
+    </a>
+
+    <a href="archive.html">
+        <img src="images/gallery-5.jpg" alt="">
+    </a>
+
+    <a href="archive.html">
+        <img src="images/gallery-6.jpg" alt="">
+    </a>
 
 </section>
 
 <section class="products">
 
-    <h2>AVAILABLE INVENTORY</h2>
-
     <div class="product-grid">
 
         <div class="product">
-            <img src="images/watch.jpg" alt="">
+            <a href="watch.html">
+                <img src="images/watch.jpg" alt="">
+            </a>
             <h3>ISM Contraband Watch</h3>
-            <a href="#" class="buy-btn">Buy Now</a>
         </div>
 
         <div class="product">
-            <img src="images/logo-tee.jpg" alt="">
+            <a href="logo-tee.html">
+                <img src="images/logo-tee.jpg" alt="">
+            </a>
             <h3>ISM Logo Tee</h3>
-            <a href="#" class="buy-btn">Buy Now</a>
         </div>
 
         <div class="product">
-            <img src="images/belt-yellow.jpg" alt="">
-            <h3>Snakeskin ISM Belt — Yellow</h3>
-            <a href="#" class="buy-btn">Buy Now</a>
-        </div>
-
-        <div class="product">
-            <img src="images/belt-pink.jpg" alt="">
-            <h3>Snakeskin ISM Belt — Pink</h3>
-            <a href="#" class="buy-btn">Buy Now</a>
+            <a href="belt-yellow.html">
+                <img src="images/belt-yellow.jpg" alt="">
+            </a>
+            <h3>Snakeskin ISM Belt</h3>
         </div>
 
     </div>
@@ -203,7 +234,7 @@ footer{
         culture, and everyday objects through limited releases and
         seasonal collections.
     </p>
-    
+
 </section>
 
 <footer>
@@ -215,7 +246,9 @@ footer{
         </a>
     </div>
 
-    <p>© ISM FOR THE PEOPLE 2026</p>
+    <p class="copyright">
+        © ISM FOR THE PEOPLE 2026
+    </p>
 
 </footer>
 

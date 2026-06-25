@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script src="https://fast.wistia.com/player.js" async></script>
+
 <style>
 
 *{
@@ -22,8 +24,7 @@ a{
     color:inherit;
 }
 
-img,
-iframe{
+img{
     width:100%;
     display:block;
 }
@@ -69,14 +70,14 @@ iframe{
     transition:.3s ease;
 }
 
-.archive-item iframe{
-    width:100%;
-    aspect-ratio:4/5;
-    border:none;
-}
-
 .archive-item img:hover{
     opacity:.85;
+}
+
+.archive-item wistia-player{
+    display:block;
+    width:100% !important;
+    aspect-ratio:4/5;
 }
 
 .wide{
@@ -121,77 +122,98 @@ iframe{
 <body>
 
 <section class="header">
-
-    <h1>Archive</h1>
-
+<h1>Archive</h1>
 </section>
 
 <section class="archive-grid">
 
-    <div class="archive-item">
-        <img src="images/archive-1.jpg" alt="">
-    </div>
+<div class="archive-item">
+<img src="images/archive-1.jpg" alt="">
+</div>
 
-    <div class="archive-item">
-        <img src="images/archive-2.jpg" alt="">
-    </div>
+<div class="archive-item">
+<img src="images/archive-2.jpg" alt="">
+</div>
 
-    <div class="archive-item">
-        <iframe
-            src="https://amber-diaz97.wistia.com/s/g54iaucki09xy7k"
-            allowfullscreen>
-        </iframe>
-    </div>
+<div class="archive-item">
 
-    <div class="archive-item">
-        <img src="images/archive-3.jpg" alt="">
-    </div>
+<script src="https://fast.wistia.com/embed/y7qnpmscwn.js" async type="module"></script>
 
-    <div class="archive-item wide">
-        <img src="images/archive-4.jpg" alt="">
-    </div>
+<style>
+wistia-player[media-id='y7qnpmscwn']:not(:defined){
+background:center/cover no-repeat url('https://fast.wistia.com/embed/medias/y7qnpmscwn/swatch');
+display:block;
+}
+</style>
 
-    <div class="archive-item">
-        <img src="images/archive-5.jpg" alt="">
-    </div>
+<wistia-player
+media-id="y7qnpmscwn"
+autoplay
+muted
+loop
+controls="false"
+seo="false">
+</wistia-player>
 
-    <div class="archive-item">
-        <iframe
-            src="https://amber-diaz97.wistia.com/s/cp9kae9rc4e5gku"
-            allowfullscreen>
-        </iframe>
-    </div>
+</div>
 
-    <div class="archive-item">
-        <img src="images/archive-6.jpg" alt="">
-    </div>
+<div class="archive-item">
+<img src="images/archive-3.jpg" alt="">
+</div>
 
-    <div class="archive-item wide">
-        <img src="images/archive-7.jpg" alt="">
-    </div>
+<div class="archive-item wide">
+<img src="images/archive-4.jpg" alt="">
+</div>
 
-    <div class="archive-item">
-        <img src="images/archive-8.jpg" alt="">
-    </div>
+<div class="archive-item">
+<img src="images/archive-5.jpg" alt="">
+</div>
 
-    <div class="archive-item">
-        <img src="images/archive-9.jpg" alt="">
-    </div>
+<div class="archive-item">
 
-    <div class="archive-item">
-        <iframe
-            src="https://fast.wistia.net/embed/iframe/YOUR_WISTIA_ID_3"
-            allowfullscreen>
-        </iframe>
-    </div>
+<script src="https://fast.wistia.com/embed/iqzu8jqp3b.js" async type="module"></script>
+
+<style>
+wistia-player[media-id='iqzu8jqp3b']:not(:defined){
+background:center/cover no-repeat url('https://fast.wistia.com/embed/medias/iqzu8jqp3b/swatch');
+display:block;
+}
+</style>
+
+<wistia-player
+media-id="iqzu8jqp3b"
+autoplay
+muted
+loop
+controls="false"
+seo="false">
+</wistia-player>
+
+</div>
+
+<div class="archive-item">
+<img src="images/archive-6.jpg" alt="">
+</div>
+
+<div class="archive-item wide">
+<img src="images/archive-7.jpg" alt="">
+</div>
+
+<div class="archive-item">
+<img src="images/archive-8.jpg" alt="">
+</div>
+
+<div class="archive-item">
+<img src="images/archive-9.jpg" alt="">
+</div>
 
 </section>
 
 <section class="footer">
 
-    <a href="index.html">
-        ← Back Home
-    </a>
+<a href="index.html">
+← Back Home
+</a>
 
 </section>
 

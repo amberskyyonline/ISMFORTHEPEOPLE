@@ -11,132 +11,123 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#F0EAD6;
-font-family:Helvetica,Arial,sans-serif;
+    background:#F0EAD6;
+    font-family:Helvetica,Arial,sans-serif;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
 .header{
-padding:4rem 1rem 2rem;
-text-align:center;
+    text-align:center;
+    padding:4rem 1rem 2rem;
 }
 
 .header h1{
-font-size:1rem;
-font-style:italic;
-letter-spacing:.2em;
-text-transform:uppercase;
+    font-size:1rem;
+    font-style:italic;
+    letter-spacing:.2em;
+    text-transform:uppercase;
 
-background:linear-gradient(
-90deg,
-#ff2b2b,
-#00ff66,
-#ffd400
-);
+    background:linear-gradient(
+        90deg,
+        #ff2b2b,
+        #00ff66,
+        #ffd400
+    );
 
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 }
 
 .archive-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:12px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    padding:12px;
 }
 
-.archive-item{
-position:relative;
-overflow:hidden;
-aspect-ratio:4/5;
-background:#000;
+.gallery{
+    position:relative;
+    overflow:hidden;
+    aspect-ratio:4/5;
+    background:#000;
 }
 
-.archive-item img{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.3s;
+.gallery img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.3s ease;
 }
 
-.archive-item img:hover{
-opacity:.85;
+.gallery img:hover{
+    opacity:.85;
 }
 
-/* WISTIA */
-
-.archive-item .wistia_embed{
-position:absolute !important;
-top:0;
-left:0;
-width:100% !important;
-height:100% !important;
-overflow:hidden;
+.gallery .wistia_embed{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%!important;
+    height:100%!important;
 }
 
-/* Force every internal wrapper to fill */
-
-.archive-item .wistia_embed *,
-.archive-item .wistia_embed iframe,
-.archive-item .wistia_embed video,
-.archive-item .wistia_embed canvas{
-width:100% !important;
-height:100% !important;
+.gallery .wistia_embed iframe,
+.gallery .wistia_embed video,
+.gallery .wistia_embed canvas{
+    width:100%!important;
+    height:100%!important;
 }
 
-/* Attempt cover */
-
-.archive-item video{
-object-fit:cover !important;
+.gallery video{
+    object-fit:cover!important;
+    transform:scale(1.15);
 }
 
 .wide{
-grid-column:span 2;
+    grid-column:span 2;
 }
 
 .footer{
-padding:3rem 1rem;
-text-align:center;
+    text-align:center;
+    padding:3rem 1rem;
 }
 
 .footer a{
+    font-style:italic;
 
-font-style:italic;
+    background:linear-gradient(
+        90deg,
+        #ff2b2b,
+        #00ff66,
+        #ffd400
+    );
 
-background:linear-gradient(
-90deg,
-#ff2b2b,
-#00ff66,
-#ffd400
-);
-
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-background-clip:text;
-
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 }
 
 @media(min-width:768px){
 
 .archive-grid{
-grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 }
 
 .wide{
-grid-column:span 2;
+    grid-column:span 2;
 }
 
 }
@@ -155,100 +146,73 @@ grid-column:span 2;
 
 <section class="archive-grid">
 
-<div class="archive-item">
-<img src="images/archive-1.jpg">
+<div class="gallery">
+    <img src="images/archive-1.jpg" alt="">
 </div>
 
-<div class="archive-item">
-<img src="images/archive-2.jpg">
+<div class="gallery">
+    <img src="images/archive-2.jpg" alt="">
 </div>
 
-<div class="archive-item">
+<!-- VIDEO 1 -->
 
 <script src="https://fast.wistia.com/embed/medias/y7qnpmscwn.jsonp" async></script>
 
-<div class="wistia_embed wistia_async_y7qnpmscwn
-seo=false
-videoFoam=false
-autoPlay=true
-muted=true
-endVideoBehavior=loop
-playbar=false
-smallPlayButton=false
-fullscreenButton=false
-volumeControl=false
-settingsControl=false">
-
+<div class="gallery">
+    <div class="wistia_embed wistia_async_y7qnpmscwn seo=false videoFoam=false autoPlay=true muted=true endVideoBehavior=loop playbar=false smallPlayButton=false fullscreenButton=false volumeControl=false settingsControl=false"
+    style="height:100%;width:100%;">
+    &nbsp;
+    </div>
 </div>
 
+<div class="gallery">
+    <img src="images/archive-3.jpg" alt="">
 </div>
 
-<div class="archive-item">
-<img src="images/archive-3.jpg">
+<div class="gallery wide">
+    <img src="images/archive-4.jpg" alt="">
 </div>
 
-<div class="archive-item wide">
-<img src="images/archive-4.jpg">
+<div class="gallery">
+    <img src="images/archive-5.jpg" alt="">
 </div>
 
-<div class="archive-item">
-<img src="images/archive-5.jpg">
-</div>
-
-<div class="archive-item">
+<!-- VIDEO 2 -->
 
 <script src="https://fast.wistia.com/embed/medias/e6ugzt5ovq.jsonp" async></script>
 
-<div class="wistia_embed wistia_async_e6ugzt5ovq
-seo=false
-videoFoam=false
-autoPlay=true
-muted=true
-endVideoBehavior=loop
-playbar=false
-smallPlayButton=false
-fullscreenButton=false
-volumeControl=false
-settingsControl=false">
-
+<div class="gallery">
+    <div class="wistia_embed wistia_async_e6ugzt5ovq seo=false videoFoam=false autoPlay=true muted=true endVideoBehavior=loop playbar=false smallPlayButton=false fullscreenButton=false volumeControl=false settingsControl=false"
+    style="height:100%;width:100%;">
+    &nbsp;
+    </div>
 </div>
 
+<div class="gallery">
+    <img src="images/archive-6.jpg" alt="">
 </div>
 
-<div class="archive-item">
-<img src="images/archive-6.jpg">
+<div class="gallery wide">
+    <img src="images/archive-7.jpg" alt="">
 </div>
 
-<div class="archive-item wide">
-<img src="images/archive-7.jpg">
+<div class="gallery">
+    <img src="images/archive-8.jpg" alt="">
 </div>
 
-<div class="archive-item">
-<img src="images/archive-8.jpg">
-</div>
-
-<div class="archive-item">
+<!-- VIDEO 3 -->
 
 <script src="https://fast.wistia.com/embed/medias/omm0ewzide.jsonp" async></script>
 
-<div class="wistia_embed wistia_async_omm0ewzide
-seo=false
-videoFoam=false
-autoPlay=true
-muted=true
-endVideoBehavior=loop
-playbar=false
-smallPlayButton=false
-fullscreenButton=false
-volumeControl=false
-settingsControl=false">
-
+<div class="gallery">
+    <div class="wistia_embed wistia_async_omm0ewzide seo=false videoFoam=false autoPlay=true muted=true endVideoBehavior=loop playbar=false smallPlayButton=false fullscreenButton=false volumeControl=false settingsControl=false"
+    style="height:100%;width:100%;">
+    &nbsp;
+    </div>
 </div>
 
-</div>
-
-<div class="archive-item">
-<img src="images/archive-9.jpg">
+<div class="gallery">
+    <img src="images/archive-9.jpg" alt="">
 </div>
 
 </section>

@@ -76,21 +76,12 @@ img{
     opacity:.85;
 }
 
-/* WISTIA */
-
 .archive-item wistia-player{
     position:absolute;
     inset:0;
     width:100% !important;
     height:100% !important;
-
     --wistia-player-object-fit:cover;
-}
-
-.archive-item iframe{
-    width:100%;
-    height:100%;
-    border:none;
 }
 
 .wide{
@@ -135,20 +126,20 @@ img{
 <body>
 
 <section class="header">
-
 <h1>Archive</h1>
-
 </section>
 
 <section class="archive-grid">
 
 <div class="archive-item">
-<img src="images/archive-1.jpg" alt="">
+    <img src="images/archive-1.jpg" alt="">
 </div>
 
 <div class="archive-item">
-<img src="images/archive-2.jpg" alt="">
+    <img src="images/archive-2.jpg" alt="">
 </div>
+
+<!-- VIDEO 1 -->
 
 <div class="archive-item">
 
@@ -176,16 +167,18 @@ seo="false">
 </div>
 
 <div class="archive-item">
-<img src="images/archive-3.jpg" alt="">
+    <img src="images/archive-3.jpg" alt="">
 </div>
 
 <div class="archive-item wide">
-<img src="images/archive-4.jpg" alt="">
+    <img src="images/archive-4.jpg" alt="">
 </div>
 
 <div class="archive-item">
-<img src="images/archive-5.jpg" alt="">
+    <img src="images/archive-5.jpg" alt="">
 </div>
+
+<!-- VIDEO 2 -->
 
 <div class="archive-item">
 
@@ -213,19 +206,46 @@ seo="false">
 </div>
 
 <div class="archive-item">
-<img src="images/archive-6.jpg" alt="">
+    <img src="images/archive-6.jpg" alt="">
 </div>
 
 <div class="archive-item wide">
-<img src="images/archive-7.jpg" alt="">
+    <img src="images/archive-7.jpg" alt="">
 </div>
 
 <div class="archive-item">
-<img src="images/archive-8.jpg" alt="">
+    <img src="images/archive-8.jpg" alt="">
+</div>
+
+<!-- VIDEO 3 -->
+
+<div class="archive-item">
+
+<script src="https://fast.wistia.com/embed/e6ugzt5ovq.js" async type="module"></script>
+
+<style>
+wistia-player[media-id='e6ugzt5ovq']:not(:defined){
+display:block;
+background:center/cover no-repeat url('https://fast.wistia.com/embed/medias/e6ugzt5ovq/swatch');
+}
+</style>
+
+<wistia-player
+media-id="e6ugzt5ovq"
+autoplay
+muted
+loop
+controls="false"
+playbar="false"
+settings="false"
+fullscreen-button="false"
+seo="false">
+</wistia-player>
+
 </div>
 
 <div class="archive-item">
-<img src="images/archive-9.jpg" alt="">
+    <img src="images/archive-9.jpg" alt="">
 </div>
 
 </section>

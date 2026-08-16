@@ -6,10 +6,21 @@
 
 <title>ISM Road Runna Tee</title>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJX17Y4NTW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZJX17Y4NTW');
+</script>
+
 <!-- Favicons & Manifest -->
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicon.ico">
 <link rel="manifest" href="/images/site.webmanifest">
 
 <style>
@@ -104,8 +115,11 @@ Limited inventory remaining.
 
 <p class="price">$50.00</p>
 
-<a href="https://square.link/u/IriLZ6J9" target="_blank" class="purchase">
-Purchase
+<a href="https://square.link/u/IriLZ6J9" 
+   target="_blank" 
+   class="purchase"
+   onclick="gtag('event', 'click_purchase', {'product_name': 'Road Runna Tee'});">
+   Purchase
 </a>
 
 <a href="/" class="back">

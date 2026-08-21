@@ -82,7 +82,7 @@ text-align:center;
 
 /* Scaled-Down Gallery Wrapper */
 .gallery-wrapper {
-max-width: 480px; /* Constrains image size to a clean, smaller width */
+max-width: 480px; /* Scaled down frame size */
 margin: 0 auto 2rem auto;
 }
 
@@ -182,9 +182,9 @@ opacity:.7;
 
 <div class="container">
 
-<!-- Endless Scroll Gallery -->
+<!-- Standard Scroll Gallery -->
 <div class="gallery-wrapper">
-  <div class="scroll-gallery" id="endlessGallery">
+  <div class="scroll-gallery">
     <img src="/images/IMG_1555.png" alt="ISM Tiffany Pinup Seiko Tank Watch - ISM Contraband Collection">
     <img src="/images/IMG_1556.png" alt="ISM Tiffany Pinup Seiko Tank Detail View">
   </div>
@@ -220,19 +220,6 @@ Tiffany Blue Pinup Girl Contraband tank from the ISM Contraband collection.
 </a>
 
 </div>
-
-<!-- Infinite Scroll Script -->
-<script>
-const gallery = document.getElementById('endlessGallery');
-
-gallery.addEventListener('scroll', () => {
-
-  if (gallery.scrollTop + gallery.clientHeight >= gallery.scrollHeight - 20) {
-    const firstImg = gallery.children[0];
-    gallery.appendChild(firstImg.cloneNode(true));
-  }
-});
-</script>
 
 </body>
 </html>

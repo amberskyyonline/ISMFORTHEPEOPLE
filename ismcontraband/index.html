@@ -80,8 +80,37 @@ padding:3rem 1.5rem;
 text-align:center;
 }
 
-.product-image{
-margin-bottom:2rem;
+/* Scaled-Down Gallery Wrapper */
+.gallery-wrapper {
+max-width: 480px; /* Constrains image size to a clean, smaller width */
+margin: 0 auto 2rem auto;
+}
+
+.scroll-gallery {
+display: flex;
+flex-direction: column;
+gap: 1.25rem;
+max-height: 520px; /* Constrains gallery height */
+overflow-y: scroll;
+scroll-snap-type: y mandatory;
+border: 1px solid rgba(128, 0, 0, 0.2);
+border-radius: 4px;
+padding: 1rem;
+background: rgba(255, 255, 255, 0.15);
+
+/* Hide scrollbars across browsers */
+-ms-overflow-style: none;  /* IE / Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-gallery::-webkit-scrollbar {
+display: none; /* Chrome / Safari / Opera */
+}
+
+.scroll-gallery img {
+width: 100%;
+scroll-snap-align: center;
+border-radius: 3px;
 }
 
 h1{
@@ -153,7 +182,13 @@ opacity:.7;
 
 <div class="container">
 
-<img src="/images/IMG_1555.png" alt="ISM Tiffany Pinup Seiko Tank Watch - ISM Contraband Collection" class="product-image">
+<!-- Endless Scroll Gallery -->
+<div class="gallery-wrapper">
+  <div class="scroll-gallery" id="endlessGallery">
+    <img src="/images/IMG_1555.png" alt="ISM Tiffany Pinup Seiko Tank Watch - ISM Contraband Collection">
+    <img src="/images/IMG_1556.png" alt="ISM Tiffany Pinup Seiko Tank Detail View">
+  </div>
+</div>
 
 <h1>ISM 'Tiffany' Pinup Tank</h1>
 
@@ -163,8 +198,8 @@ Tiffany Blue Pinup Girl Contraband tank from the ISM Contraband collection.
 
 <ul class="specs-list">
   <li>• Illustration in face is Hand drawn</li>
-  <li>• Pony Hair & Suede Band</li>
-  <li>• Heavy-Gauge Stainless Steel Case</li>
+  <li>• Faux Pony Hair & Genuine calfskin leather Band</li>
+  <li>• Heavy-Gauge Stainless Steel Seiko Tank</li>
   <li>• Precise Japanese Quartz Movement</li>
   <li>• Custom-Molded Alloy Hardware</li>
 </ul>
@@ -185,6 +220,19 @@ Tiffany Blue Pinup Girl Contraband tank from the ISM Contraband collection.
 </a>
 
 </div>
+
+<!-- Infinite Scroll Script -->
+<script>
+const gallery = document.getElementById('endlessGallery');
+
+gallery.addEventListener('scroll', () => {
+
+  if (gallery.scrollTop + gallery.clientHeight >= gallery.scrollHeight - 20) {
+    const firstImg = gallery.children[0];
+    gallery.appendChild(firstImg.cloneNode(true));
+  }
+});
+</script>
 
 </body>
 </html>

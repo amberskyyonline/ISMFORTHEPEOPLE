@@ -102,8 +102,34 @@ background:linear-gradient(
 
 .description{
 color:#800000;
-line-height:1.8;
+line-height:1.6;
+margin-bottom:1.5rem;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.specs-list{
+list-style:none;
+padding:0;
+margin:0 auto 1.5rem auto;
+max-width:600px;
+text-align:center;
+color:#800000;
+}
+
+.specs-list li{
+font-size:0.9rem;
+line-height:1.6;
+margin-bottom:0.4rem;
+}
+
+.limited-notice{
+font-size:0.85rem;
+font-style:italic;
+color:#800000;
 margin-bottom:2rem;
+opacity:0.9;
 }
 
 .colors{
@@ -115,22 +141,38 @@ margin-bottom:2rem;
 
 .colors button{
 background:none;
-border:1px solid #fff;
-color:#fff;
+border:1px solid #800000;
+color:#800000;
 padding:12px 24px;
 cursor:pointer;
+font-size:0.9rem;
+transition:0.2s ease;
+}
+
+.colors button:hover{
+background:#800000;
+color:#F0EAD6;
 }
 
 .price{
 font-size:1.2rem;
 margin-bottom:2rem;
+font-weight:600;
 }
 
 .purchase{
 display:inline-block;
 padding:14px 32px;
-border:1px solid #fff;
+border:1px solid #800000;
+color:#800000;
 margin-bottom:2rem;
+font-weight:600;
+transition:0.2s ease;
+}
+
+.purchase:hover{
+background:#800000;
+color:#F0EAD6;
 }
 
 .back{
@@ -159,16 +201,14 @@ Available in two colors.
 </p>
 
 <ul class="specs-list">
-  <li>• Size Small Fits a 28"–30" actual waist (Pant sizes 26–28).</li>
-  <li>• Size Medium Fits a 32"–34" actual waist (Pant sizes 30–32).</li>
-  <li>• Size Large Fits a 36"–38" actual waist (Pant sizes 34–36).</li>
-  <li>• Unisex sizing</li>
-
+  <li>Size Small Fits a 28"–30" actual waist (Pant sizes 26–28).</li>
+  <li>Size Medium Fits a 32"–34" actual waist (Pant sizes 30–32).</li>
+  <li>Size Large Fits a 36"–38" actual waist (Pant sizes 34–36).</li>
+  <li>Unisex sizing</li>
 </ul>
 
 <p class="limited-notice">Limited quantities available.</p>
 
-  
 <div class="colors">
 
 <button onclick="document.getElementById('beltImage').src='/images/15.png'">
@@ -189,7 +229,7 @@ Lake Rose Pink
    onclick="gtag('event', 'click_purchase', {'product_name': 'Snakeskin Belt'});">
    Purchase
 </a>
-  
+
 <a href="/" class="back">
 ← Back to Home
 </a>

@@ -77,10 +77,43 @@ img{
     height:auto;
 }
 
+/* HORIZONTAL SCROLL GALLERY */
+
+.gallery{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:0 1rem 1rem;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+}
+
+.gallery::-webkit-scrollbar{
+    display:none;
+}
+
+.gallery a{
+    flex:0 0 auto;
+    width:min(80vw,450px);
+    scroll-snap-align:start;
+}
+
+.gallery img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    transition:.3s ease;
+}
+
+.gallery img:hover{
+    opacity:.85;
+}
+
 .products{
     max-width:1200px;
     margin:0 auto;
-    padding:3rem 1rem 3rem;
+    padding:5rem 1rem 3rem;
 }
 
 .product-grid{
@@ -150,7 +183,7 @@ img{
     font-size:0.95rem;
     font-weight:600;
     margin-top:0.3rem;
-    color:#800000; /* Solid Maroon */
+    color:#800000; /* Maroon lettering */
 }
 
 .about{
@@ -276,6 +309,34 @@ footer{
 
 <section class="hero">
     <img src="/images/ISMLOGO.png" alt="ISM For The People Official Logo" class="logo">
+</section>
+
+<section class="gallery">
+
+    <a href="/ismbelts/">
+        <img src="/images/LRSSB1.jpg" alt="ISM LakeRose Snakeskin">
+    </a>
+
+    <a href="/ismbelts/">
+        <img src="/images/LRSSB2.jpg" alt="ISM LakeRose Snakeskin">
+    </a>
+
+    <a href="/ismlogotee/">
+        <img src="/images/RRTEE1.jpeg" alt="ISM Editorial Shot">
+    </a>
+
+    <a href="/ismbelts/">
+        <img src="/images/BVSS1.jpg" alt="ISM BushViper Snakeskin">
+    </a>
+
+    <a href="/ismbelts/">
+        <img src="/images/BVSS2.jpg" alt="ISM BushViper Snakeskin">
+    </a>
+
+    <a href="/ismcontraband/">
+        <img src="/images/TBPUW1.jpeg" alt="ISM CONTRABAND">
+    </a>
+
 </section>
 
 <section class="products">
